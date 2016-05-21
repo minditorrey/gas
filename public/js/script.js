@@ -18,7 +18,7 @@
 		lat: 37.499293,
 		lng: -121.9198193,
 		id: 2,
-
+		animation: google.maps.Animation.BOUNCE,
 		icon: '/images/zombie.png'
 	});
 

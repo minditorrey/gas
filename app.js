@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var path = require('path');
 var mongoose = require('mongoose');
-var jwt = require('jsonwebtoken');
 var cookieParser = require('cookie-parser');
  
 require('dotenv').config();

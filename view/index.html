@@ -2,20 +2,36 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+  	<link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/styles/style.css">
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  	<script src="/bower_components/angular/angular.min.js"></script>
+  	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  	<script src="/js/module.js"></script>
+  	<script src="/js/controllers.js"></script>
+  	<script src="/js/services.js"></script>
 	<title>Grimes Alert</title>
 </head>
-<body>
-	<div id="map-canvas">
-		
+<body ng-app='gas'>
 
-	</div>
+
+	<ui-view></ui-view>
+
+	<div id="map-canvas">
+	</div>	
+
+
+
+
 
 
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD25R92e34Iacsn2MFZ-vlbLXCfc9pJs4o&sensor=false"></script>
-	<script src="mapster.js"></script>
-	<script src="mapOptions.js"></script>
-	<script src="script.js"></script>
+	<script src="/js/mapster.js"></script>
+	<script src="/js/mapOptions.js"></script>
+	<script src="/js/script.js"></script>
 	
 </body>
 </html>

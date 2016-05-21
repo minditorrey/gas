@@ -6,8 +6,67 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	background-color: black;
 }
 
 #map-canvas {
-	height: 100%;
+	height: 70%;
+}
+
+.large {
+	font-size: 72px;
+	font-family: 'Candal', sans-serif;
+	color: #ff9719;
+
+}
+.header1 {
+	margin-left: 3%;
+	/*font-family: 'Candal', sans-serif;*/
+	color: #ff9719;
+}
+
+.header2 {
+	/*font-family: 'Candal', sans-serif;*/
+	color: red;
+	margin-top: 3%;
+}
+
+.icon {
+	margin-left: 30%;
+	margin-top: 100%;
+}
+h2 {
+	line-height: .8em;
+}
+
+h1 {
+	color: #ff9719;
+	font-family: 'Candal', sans-serif;
+	margin-left: 3%;
+}
+
+p {
+	font-size: 16px;
+}
+
+.btn-lg {
+	background-color: #ff9719;
+	color: white;
+	margin-top: 5%;
+}
+
+.saveBtn, .editBtn  {
+	background-color: #ff9719;
+	color: white;
+	margin-top: 5%;
+}
+
+.newAlert {
+	color: #ff9719;
+	margin-bottom: 3%;
+}
+
+.alertHeader {
+	margin-left: 15%;
+	margin-bottom: 5%;
 }
