@@ -8,12 +8,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		.state('home', {
 			url: '/',
 			templateUrl: '/templates/home.html',
-			controller: 'homeController'
+			controller: 'alertsController'
 		})
 		.state('alerts', {
 			url: '/alerts',
 			templateUrl: '/templates/alerts.html',
 			controller: 'alertsController'
+		})
+		.state('list', {
+			url: '/list',
+			templateUrl: '/templates/list.html',
+			controller: 'listController'
 		})
 
 

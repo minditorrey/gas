@@ -11,4 +11,20 @@ app.service('AlertService', function($http) {
 	this.create = alert => {
   		return $http.post('/api/alerts', alert);
   	}
-  	});
+
+  	this.tweet = alert => {
+  		return $http.post('/api/twitter', alert);
+  	}
+
+  	this.geocode = location => {
+  		return $http.get(`/api/map/${location}`);
+  	}
+
+  	this.getLocations = () => {
+  		return $http.get('/api/locations');
+  	}
+  	this.removeAlert = (alert) => {
+  		return $http.delete(`/api/alerts/${alert._id}`);
+  	}
+
+});

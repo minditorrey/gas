@@ -2,6 +2,11 @@ html {
 	height: 100%;
 }
 
+.google-map-container {
+
+	height: 70%;
+}
+
 body {
 	height: 100%;
 	padding: 0;
@@ -69,4 +74,13 @@ p {
 .alertHeader {
 	margin-left: 15%;
 	margin-bottom: 5%;
+}
+
+.alertList {
+	margin-left: 12%;
+	color: red;
+}
+
+.alertListRow {
+	margin-top: 3%;
 }

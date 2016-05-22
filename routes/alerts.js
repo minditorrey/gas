@@ -18,5 +18,12 @@ router.route('/')
 		});	
 	});
 
+router.route('/:id')
+    .delete((req, res) => {
+    	var alert = (req.body)
+    	Alert.findByIdAndRemove(req.params.id, (err, alert) => {
+      		res.status(err ? 400 : 200).send(err);
+    	})
+  	})
 
 module.exports = router;

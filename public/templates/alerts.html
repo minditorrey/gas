@@ -6,7 +6,7 @@
 	</div>
 
 	<div class="row newAlert">
-  	<form ng-model="alertForm" ng-submit='saveChanges()'>
+  	<form ng-model="alertForm" >
 		<div class="col-md-4 col-md-offset-2">
 			<label>Your Name:</label>
 			<input class="form-control" ng-model='alertForm.reportedBy' placeholder="Jane Doe"/>
@@ -28,7 +28,8 @@
 		<input class="form-control" ng-model='alertForm.injuries'placeholder="possible injuries"/>
     
     <button type="button" class="btn btn-default editBtn" ng-click='cancelAdd()'>Cancel</button>
-    <button class="btn btn-default saveBtn">ADD ALERT</button>
+    <button ng-click="addAlert(alertForm)" class="btn btn-default saveBtn">ADD ALERT</button>
+    <button type="button" class="btn btn-default editBtn" ui-sref="home">Home</button>
   </div>
 
   </form>
