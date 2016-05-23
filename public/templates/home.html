@@ -1,29 +1,46 @@
 <div class="row">
-	<div class="col-sm-1 col-sm-offset-1">
-		<img class="icon" src="http://vignette3.wikia.nocookie.net/strategy-empires/images/0/0a/Siren.png/revision/latest?cb=20140107125601" width="100" alt="">	
+	<div class="col-sm-1">
+			
+	</div>
+	<div class="col-sm-1">
+		<img class="icon-lg img-circle" src="http://i.imgur.com/0nGNdz4.jpg" width="120" alt="">	
 	</div>
 
-	<div class="col-sm-3 header1">
-		<h1><span class="large">G</span>rimes</h1>
-		<h2><span class="large">A</span>lert</h2>
-		<h2><span class="large">S</span>ystem</h2>
-	</div>
 	
-
-
-	<div class="col-sm-3 header2">
-		<button ui-sref="alerts" class="btn btn-lg">Report Sighting</button>	
+	<div class="col-sm-3 header1">
+		<h1 class="large1"><span class="large">G</span>rimes</h1>
+		<h2><span class="large">A</span>lert</h2>
+		<h2 class="large3"><span class="large">S</span>ystem</h2>
 	</div>
 
 	<div class="col-sm-3 header2">
-		<button ui-sref="list" class="btn btn-lg">View Alerts</button>	
+		<button ui-sref="alerts" class="btn btn-lg reportBtn">Report Sighting</button>	
+	</div>
+
+	<div class="col-sm-3 header2">
+		<button ui-sref="list" class="btn btn-lg">View Info</button>	
 	</div>
 </div>
 
 <div class="row alertListRow">
-	<div ng-repeat="alert in alerts">
-		<p class="alertList">{{alert.location}}</p>
-		<button ng-click="removeAlert(alert)" class="btn glyphicon glyphicon-trash removeAlert">Remove</button>
+	<div ng-repeat="alert in alerts" class="well">
+		<div class="col-sm-1">
+		</div>
+		<div class="col-sm-1">
+			<img class="icon" src="http://vignette3.wikia.nocookie.net/strategy-empires/images/0/0a/Siren.png/revision/latest?cb=20140107125601" width="50" alt="">
+		</div>
+		<div class="col-sm-7">
+			<p class="alertList">Location: {{alert.location}}</p>
+			<p class="alertList">Swarm of: {{alert.size}}</p>
+		</div>
+		<div class="col-sm-1">
+			<button ui-sref="details({id: alert._id})" ng-click="getThisAlert(alert)" class="btn glyphicon glyphicon-trash alertDetails">Details</button>
+		</div>
+		<div class="col-sm-1">
+			<button ng-click="removeAlert(alert); removeLocation(location)" class="btn glyphicon glyphicon-trash removeAlert">Remove</button>
+		</div>
+		<div class="col-sm-1">
+		</div>
 	</div>
 </div>
 

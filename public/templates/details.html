@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-sm-2">		
+	</div>
+		<div class="col-sm-2">		
+	</div>
+	<div class="col-sm-2">		
+	</div>
+	<div class="col-sm-2 header2">
+		<button ui-sref="home" class="btn btn-lg homeBtn detailBtns">Home</button>	
+	</div>
+	<div class="col-sm-2 header2">
+		<button ui-sref="alerts" class="btn btn-lg detailBtns">Report Sighting</button>	
+	</div>
+
+	<div class="col-sm-2 header2">
+		<button ui-sref="list" class="btn btn-lg detailBtns">View Info</button>	
+	</div>
+</div>
+
+<div class="row detailInfo">
+	<div class="well detailsWell">
+		<div class="col-sm-4 col-sm-offset-2 details">
+			<p>Location: {{alert.location}}</p>	
+			<p>Estimated Swarm: {{alert.size}}</p>
+			<p>Possible Injuries: {{alert.injuries}}</p>	
+		</div>
+		<div class="col-sm-4 col-sm-offset-1 details">
+			<p>Trajectory: {{alert.trajectory}}</p>	
+			<p>Reported By: {{alert.reportedBy}}</p>
+		</div>
+	</div>
+</div>
