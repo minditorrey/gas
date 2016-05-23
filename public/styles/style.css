@@ -2,10 +2,18 @@ html {
 	height: 100%;
 }
 
-.google-map-container {
+.img-circle {
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px #2A2A2A;
+  margin-left: 40%;
+  margin-top: 85%;
+}
 
+
+.google-map-container {
 	height: 70%;
 }
+
 
 body {
 	height: 100%;
@@ -19,14 +27,28 @@ body {
 }
 
 .large {
-	font-size: 72px;
+	font-size: 64px;
 	font-family: 'Candal', sans-serif;
 	color: #ff9719;
+}
+
+
+.well {
+	height: 80px;
 
 }
+.large1 {
+	margin-left: -5%;
+}
+
+.large3 {
+		margin-left: -5%;
+}
+
 .header1 {
-	margin-left: 3%;
-	/*font-family: 'Candal', sans-serif;*/
+	margin-left: 5%;
+	margin-top: 2%;
+	font-family: 'Candal', sans-serif;
 	color: #ff9719;
 }
 
@@ -36,10 +58,7 @@ body {
 	margin-top: 3%;
 }
 
-.icon {
-	margin-left: 30%;
-	margin-top: 100%;
-}
+
 h2 {
 	line-height: .8em;
 }
@@ -77,10 +96,74 @@ p {
 }
 
 .alertList {
-	margin-left: 12%;
-	color: red;
+	color: black;
+	font-size:18px;
+	font-weight: bold;
+	line-height: .8em;
 }
 
 .alertListRow {
 	margin-top: 3%;
+}
+
+.removeAlert {
+	background-color: #ff9719;
+	color: white;
+	margin-left: 5%;
+	margin-right: 8%;
+}
+
+.homeBtn {
+	margin-left: 35%;
+
+}
+
+.details {
+	font-size: 22px;
+	color: black;
+}
+
+.detailInfo {
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+.reportBtn {
+	margin-left: 50%;
+}
+
+.detailsWell {
+	height: 150px;
+	width: 80%;
+	margin-left: 10%;
+
+}
+.alertDetails {
+	background-color: #ff9719;
+	color: white;	
+	margin-right: 5%;
+}
+
+  .cover { 
+  background: url(https://spencerfsu15.files.wordpress.com/2015/11/the-walking-dead-605-rick-grimes-running-walkers-850x560.jpg) no-repeat 0px 0px; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 1300px;
+  height: 900px;
+  transition: all .2s ease-in-out;
+  margin-left: 3%;
+}
+.cover:hover {
+  transform: translate(125px, 125px) scale(1.5);
+}
+
+.enterBtn {
+	margin-bottom: 10%;
+	margin-top: 10%;
+}
+.hospitals {
+	margin-top: 10%;
+	color: black;
+	height: 300px;
 }

@@ -19,11 +19,22 @@ router.route('/')
 	});
 
 router.route('/:id')
+  	.put((req, res) => {
+    	Alert.findByIdAndUpdate(req.params.id, { $set: req.body }, (err, alert) => {
+      res.status(err ? 400 : 200).send(err || alert);
+    })
+  })
     .delete((req, res) => {
     	var alert = (req.body)
     	Alert.findByIdAndRemove(req.params.id, (err, alert) => {
       		res.status(err ? 400 : 200).send(err);
     	})
   	})
+  	.get((req, res) => {
+    	Alert.findById(req.params.id, function (err, alert) {
+    	res.status(err ? 400 : 200).send(err || alert);
+    	console.log('alert:', alert);
+  		});
+  	});
 
 module.exports = router;

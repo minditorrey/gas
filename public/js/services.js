@@ -27,4 +27,12 @@ app.service('AlertService', function($http) {
   		return $http.delete(`/api/alerts/${alert._id}`);
   	}
 
+    this.removeLocation = (location) => {
+      return $http.delete(`/api/locations/${location._id}`);
+    }
+
+    this.getThisAlert = (id) => {
+      return $http.get(`/api/alerts/${id}`);
+    }
+
 });

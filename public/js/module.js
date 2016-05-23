@@ -5,6 +5,11 @@ var app = angular.module('gas', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider) {
 
 	$stateProvider
+		.state('splash', {
+			url: '/',
+			templateUrl: '/templates/splash.html',
+			controller: 'alertsController'
+		})
 		.state('home', {
 			url: '/',
 			templateUrl: '/templates/home.html',
@@ -18,8 +23,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		.state('list', {
 			url: '/list',
 			templateUrl: '/templates/list.html',
-			controller: 'listController'
+			controller: 'alertsController'
 		})
+		.state('details', {
+			url: '/details/:id',
+			templateUrl: '/templates/details.html',
+			controller: 'detailsController'
+		})
+
 
 
 

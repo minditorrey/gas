@@ -2,12 +2,25 @@
 
 var app = angular.module('gas');
 
+app.controller('detailsController', function($rootScope, $scope, $state, $stateParams, AlertService) {
+    console.log('detailsCtrl!');
 
-app.controller('alertsController', function($scope, AlertService) {
+    console.log('params', $stateParams.id)
+    AlertService.getThisAlert($stateParams.id)
+    .then(res => {
+        $scope.alert = res.data;
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
+});
+
+app.controller('alertsController', function($scope, AlertService, $stateParams) {
     console.log('alertsCtrl!');
     AlertService.getAll($scope.alerts)
     .then(res => {
         $scope.alerts = res.data;
+        var alerts = $scope.alerts;
     })
     .catch(err => {
         console.log('err:', err);
@@ -16,11 +29,17 @@ app.controller('alertsController', function($scope, AlertService) {
     $scope.removeAlert= function(alert) {
         AlertService.removeAlert(alert);
         $scope.alerts.splice(0, 1);
+    }    
+
+    $scope.removeLocation= function(location) {
+        AlertService.removeLocation(location);
+        $scope.locations.splice(0, 1);
     }
+
 
     $scope.addAlert = function(alertForm) {
     	AlertService.create($scope.alertForm);
-    	$scope.alerts.push($scope.alertForm);
+    	// $scope.alerts.push($scope.alertForm);
 
         AlertService.tweet($scope.alertForm);
         var location = $scope.alertForm.location; 
@@ -50,6 +69,7 @@ app.controller('alertsController', function($scope, AlertService) {
         
                     var map = new google.maps.Map(document.getElementById("google-map-container"),
                  myOptions);
+
                     
                     for(var i = 0; i < locations.length; i++) {
                         
@@ -61,7 +81,7 @@ app.controller('alertsController', function($scope, AlertService) {
                         
                         })        
                         // marker.setMap(myOptions);
-                        
+
                     }
                     
                 })
@@ -75,6 +95,7 @@ app.controller('alertsController', function($scope, AlertService) {
             })
             $scope.alertForm = null;
     }
+
 
 
     
